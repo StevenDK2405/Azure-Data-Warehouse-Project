@@ -11,31 +11,16 @@ The goal of this project is to develop a data warehouse solution using Azure Syn
 - Import the data into Synapse;
 - Transform the data into the star schema; and finally, view the reports from Analytics.
 
-The business outcomes we are designing for are as follows:
-1. Analyze how much time is spent per ride
-- Based on date and time factors such as day of week and time of day
-- Based on which station is the starting and / or ending station
-- Based on age of the rider at time of the ride
-- Based on whether the rider is a member or a casual rider
-2. Analyze how much money is spent
-- Per month, quarter, year
-- Per member, based on the age of the rider at account start
-3. Analyze how much money is spent per member
-- Based on how many rides the rider averages per month
-- Based on how many minutes the rider spends on a bike per month
-
-
-
 # Steps To Reproduce The project
 
 ## Task1 : Create Azure resources
-1. Create an **Azure PostgreSQL database**.
+1. Create an Azure PostgreSQL database
 <img src="/img/postgresql.png" title=" PostgreSQL db"  width="500">
-2. Create an **Azure Storage Account**
+2. Create an Azure Storage Account
 <img src="/img/storage_account.png" title="storage account"  width="500">
 Create container:
 <img src="/img/container.png" title="storage account"  width="500">
-3. Create an **Azure Synapse Workspace**
+3. Create an Azure Synapse Workspace
 <img src="/img/synapse_ws.png" title="synapse workspace"  width="500">
 <img src="/img/resources.png" title="resources"  width="500">
 
@@ -72,6 +57,7 @@ Once in Blob storage, the files will be shown in the data lake node in the Synap
 <img src="/img/create_table.png" title="create table"  width="700">
 
 Verify the data:
+
 <img src="/img/verify_data_after.png" title="verify table"  width="700">
 ## Task 6: TRANSFORM the data to the star schema
 
@@ -80,7 +66,7 @@ We will write SQL scripts to transform the data from the staging tables to the f
 
 
 1. Go to the Develop section and create a script
-2. Run all scripts in folder *starTables* in order to create the star tables
+2. Run all scripts in folder *transformation scripts* in order to create the star tables
 3. At the end of the process, you should see your star model tables created and populated in the 
 <img src="/img/load_schema.png" title="star tables"  width="500">
 <img src="/img/star_schema_storage.png" title="star tables"  width="500">
