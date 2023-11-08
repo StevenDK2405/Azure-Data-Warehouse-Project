@@ -14,13 +14,7 @@ AS (
         [payment_id], 
         [date],
         [rider_id],
-        [amount],
-        DATEPART(DAY, CONVERT(DATE, date)) AS day,
-        DATEPART(MONTH, CONVERT(DATE, date)) AS month,
-        DATEPART(QUARTER, CONVERT(DATE, date)) AS quarter,
-        DATEPART(YEAR, CONVERT(DATE, date)) AS year,
-        DATEPART(DAYOFYEAR, CONVERT(DATE, date)) AS day_of_year,
-        DATEPART(WEEKDAY, CONVERT(DATE, date)) AS day_of_week
+        [amount]
     FROM 
         [dbo].[staging_payment]
 );
